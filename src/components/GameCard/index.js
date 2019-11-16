@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function FriendCard(props) {
+function GameCard(props) {
     return (
         <div className="card">
             <div className="img-container">
@@ -16,17 +16,19 @@ function FriendCard(props) {
                         <strong>Occupation:</strong> {props.occupation}
                     </li>
                     <li>
-                        <strong>Address:</strong> {props.location}
+                        <strong>Location:</strong> {props.location}
                     </li>
                 </ul>
             </div>
-            <span className="remove">x</span>
+            <span onClick={() => props.removeGame(props.id)} className="remove">
+                x
+            </span>
         </div>
 
     );
 }
 
-export default FriendCard;
+export default GameCard;
 
 
 

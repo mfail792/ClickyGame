@@ -1,34 +1,43 @@
-import React from 'react';
-import FriendCard from "./components/FriendCard";
+import React, { Component } from 'react';
+import GameCard from "./components/GameCard";
 import Wrapper from "./componens/Wrapper";
+import Title from "./components/Title";
 import games from "./games.json";
 import './App.css';
 
 
-function App() {
-  return (
-    <Wrapper>
-      <h1 className="title">Friends List</h1>
-      <FriendCard
-        name={games[0].name}
-        image={games[0].image}
-        occupation={games[0].occupation}
-        location={games[0].location}
-      />
-      <FriendCard
-        name={games[1].name}
-        image={games[1].image}
-        occupation={games[1].occupation}
-        location={games[1].location}
-      />
-      <FriendCard
-        name={games[2].name}
-        image={games[2].image}
-        occupation={games[2].occupation}
-        location={games[2].location}
-      />
-    </Wrapper>
-  );
+class App extends Component {
+  state = {
+    games
+  };
+
+  removeGame = id => {
+    // Filter this.state.games for games with an id not equal to  the id being removed
+    const games = this.state.games.filter(game => game.id !== id);
+    // Set this.state.games equal to the new games array
+    this.setState({ games });
+  };
+
+  // Rendering a GameCard component for each game object
+  render() {
+    return (
+      <Wrapper>
+        <Title>Games List</Title>
+        {this.state.games.map(game => (
+          <GameCard
+            removeGame={this.removeGame}
+            id={game.id}
+            key={game.id}
+            name={game.id}
+            image={game.image}
+            occupation={game.occupation}
+            location={game.location}
+          />
+        ))}
+
+      </Wrapper>
+    );
+  }
 }
 
 export default App;
