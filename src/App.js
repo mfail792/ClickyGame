@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./componens/Wrapper";
+import games from "./games.json";
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <h1 className="title">Friends List</h1>
+      <FriendCard
+        name={games[0].name}
+        image={games[0].image}
+        occupation={games[0].occupation}
+        location={games[0].location}
+      />
+      <FriendCard
+        name={games[1].name}
+        image={games[1].image}
+        occupation={games[1].occupation}
+        location={games[1].location}
+      />
+      <FriendCard
+        name={games[2].name}
+        image={games[2].image}
+        occupation={games[2].occupation}
+        location={games[2].location}
+      />
+    </Wrapper>
   );
 }
 
