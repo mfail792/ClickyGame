@@ -31,5 +31,8 @@ function GameCard(props) {
 export default GameCard;
 
 
+// updated function component GameCard with onClick to remove game; renamed FriendCard to GameCard
+
+
 
 
