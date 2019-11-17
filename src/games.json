@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Mario",
-        "image": "https://www5.minijuegosgratis.com/v3/games/thumbnails/222662_1.jpg",
+        "image": "https://mario.nintendo.com/assets/img/home/char-mario.png",
         "occupation": "Plumber",
         "location": "1-1"
     },
@@ -11,12 +11,12 @@
         "name": "Lara Croft",
         "image": "https://upload.wikimedia.org/wikipedia/en/7/7a/Lara_Croft.png",
         "occupation": "Cave Explorer",
-        "location": "An Ominous Cave"
+        "location": "Ominous Caves"
     },
     {
         "id": 3,
         "name": "Bowser",
-        "image": "https://www.mariowiki.com/images/thumb/e/e9/Tanooki_Bowser.png/1200px-Tanooki_Bowser.png",
+        "image": "https://vignette.wikia.nocookie.net/ironyoshi1212rockz/images/d/d1/Character-bowser.png/revision/latest?cb=20160112162332",
         "occupation": "Bad Guy",
         "location": "8-4"
     },
@@ -29,10 +29,10 @@
     },
     {
         "id": 5,
-        "name": "Rennyn",
-        "image": "https://i.pinimg.com/originals/d9/29/79/d929790e228555be995b9458534f83a7.jpg",
-        "occupation": "Rogue",
-        "location": "Vixon Tor"
+        "name": "Nightcrawler",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/8/88/Nightcrawler.PNG/250px-Nightcrawler.PNG",
+        "occupation": "Lurker",
+        "location": "Dark Alleys"
     },
     {
         "id": 6,
@@ -50,36 +50,36 @@
     },
     {
         "id": 8,
-        "name": "Toejam",
-        "image": "https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/toejam-toejam-earl-back-in-the-groove-2.49.jpg",
-        "occupation": "Intergalactic DJ",
-        "location": "Earth"
+        "name": "Blaze",
+        "image": "https://vignette.wikia.nocookie.net/streets-of-rage/images/b/bd/Blaze.png/revision/latest?cb=20141023185413",
+        "occupation": "Karate Master",
+        "location": "The Streets"
     },
     {
         "id": 9,
-        "name": "Ecco",
-        "image": "https://www.borisjulie.com/wp-content/uploads/2018/07/B-910.jpg",
-        "occupation": "Dolphin",
-        "location": "The Ocean"
+        "name": "Skate",
+        "image": "https://miro.medium.com/max/434/1*LcMhvwYfX_-ElXupUqD_ow.png",
+        "occupation": "Blader",
+        "location": "The Streets"
     },
     {
         "id": 10,
         "name": "Jason",
-        "image": "https://vignette.wikia.nocookie.net/23a71762-b93f-473b-8249-e0a68056aeb9/scale-to-width-down/800",
+        "image": "https://i.redd.it/pbn3fq8247k21.png",
         "occupation": "Camp Terror",
         "location": "Crystal Lake"
     },
     {
         "id": 11,
         "name": "Axel",
-        "image": "https://vignette.wikia.nocookie.net/projectxzone/images/6/60/PXZ2-Axel_Stone.png/revision/latest?cb=20170608044026",
+        "image": "https://vignette.wikia.nocookie.net/bareknuckle/images/3/37/Axelprofile3.png/revision/latest?cb=20090901052401",
         "occupation": "Martial Artist",
         "location": "The Streets"
     },
     {
         "id": 12,
         "name": "Giygas",
-        "image": "https://i.ytimg.com/vi/7E2kHsamg44/maxresdefault.jpg",
+        "image": "https://pbs.twimg.com/profile_images/2996369590/e3bb5a5a69c88bc327bf82a113143766_400x400.jpeg",
         "occupation": "Galaxy Devourer",
         "location": "Earth's Core"
     }

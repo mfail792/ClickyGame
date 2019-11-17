@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import GameCard from "./components/GameCard";
-import Wrapper from "./componens/Wrapper";
+import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import games from "./games.json";
 import './App.css';
@@ -28,7 +28,7 @@ class App extends Component {
             removeGame={this.removeGame}
             id={game.id}
             key={game.id}
-            name={game.id}
+            name={game.name}
             image={game.image}
             occupation={game.occupation}
             location={game.location}

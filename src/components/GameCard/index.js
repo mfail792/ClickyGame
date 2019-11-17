@@ -10,7 +10,7 @@ function GameCard(props) {
             <div className="content">
                 <ul>
                     <li>
-                        <stong>Name:</stong> {props.name}
+                        <strong>Name:</strong> {props.name}
                     </li>
                     <li>
                         <strong>Occupation:</strong> {props.occupation}
