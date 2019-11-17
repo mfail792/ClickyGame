@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Games List</Title>
+        <Title>Character Click!</Title>
         {this.state.games.map(game => (
           <GameCard
             removeGame={this.removeGame}
