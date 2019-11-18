@@ -2,13 +2,20 @@ import React, { Component } from 'react';
 import GameCard from "./components/GameCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import NavBar from "./components/NavBar";
 import games from "./games.json";
 import './App.css';
 
 
+//setting global props
 class App extends Component {
   state = {
-    games
+    games,
+    topScore: 0,
+    currentScore: 0,
+    rightorWrong: "",
+    clicked: [],
+
   };
 
   removeGame = id => {
@@ -18,11 +25,11 @@ class App extends Component {
     this.setState({ games });
   };
 
-  // Rendering a GameCard component for each game object
+  // Rendering components
   render() {
     return (
       <Wrapper>
-        <Title>Character Click!</Title>
+        <Title>Video Game Character Click!</Title>
         {this.state.games.map(game => (
           <GameCard
             removeGame={this.removeGame}
@@ -41,3 +48,5 @@ class App extends Component {
 }
 
 export default App;
+
+
