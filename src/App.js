@@ -2,12 +2,22 @@ import React, { Component } from 'react';
 import GameCard from "./components/GameCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import NavBar from "./components/NavBar";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import games from "./games.json";
 import './App.css';
 
+function shuffleIt(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
 
-//setting global props
+
+
+//setting state
 class App extends Component {
   state = {
     games,
@@ -15,7 +25,6 @@ class App extends Component {
     currentScore: 0,
     rightorWrong: "",
     clicked: [],
-
   };
 
   removeGame = id => {
@@ -28,25 +37,38 @@ class App extends Component {
   // Rendering components
   render() {
     return (
-      <Wrapper>
-        <Title>Video Game Character Click!</Title>
-        {this.state.games.map(game => (
-          <GameCard
-            removeGame={this.removeGame}
-            id={game.id}
-            key={game.id}
-            name={game.name}
-            image={game.image}
-            occupation={game.occupation}
-            location={game.location}
+      <div>
+        <Wrapper>
+          <Navbar
+            currentScore={this.state.currentScore}
+            topScore={this.state.topScore}
+            rightorWrong={this.state.rightorWrong}
           />
-        ))}
 
-      </Wrapper>
+          <Title>Video Game Memories!
+        </Title>
+          {this.state.games.map(game => (
+            <GameCard
+              removeGame={this.removeGame}
+              id={game.id}
+              key={game.id}
+              name={game.name}
+              image={game.image}
+              occupation={game.occupation}
+              location={game.location}
+            />
+
+          ))}
+
+        </Wrapper>
+        <Footer />
+      </div>
+
+
+
     );
   }
 }
-
 export default App;
 
 
