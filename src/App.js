@@ -15,8 +15,6 @@ function shuffleIt(array) {
   return array;
 };
 
-
-
 //setting state
 class App extends Component {
   state = {
