@@ -3,7 +3,7 @@ import "./style.css";
 
 function Footer() {
     return (
-        <div class="footer">
+        <div className="footer">
             <h5>Copyright&copy; Matt Faile, 2019</h5>
         </div>
     );

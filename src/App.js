@@ -34,6 +34,44 @@ class App extends Component {
     this.setState({ games });
   };
 
+  handleIncrement = () => {
+    const newTotal = this.state.currentScore + 1;
+    this.setState({
+      currentScore: newTotal,
+      rightorWrong: ""
+    });
+    if (newTotal >= this.state.topScore) {
+      this.setState({ topScore: newTotal });
+    }
+    else if (newTotal === 12) {
+      this.setState({ rightorWrong: "Winner!" });
+    }
+    this.handleShuffle();
+  };
+
+  handleClick = id => {
+    if (this.state.clicked.indexOf(id) === -1) {
+      this.handleIncrement();
+      this.setState({ clicked: this.state.clicked.concat(id) })
+    } else {
+      this.handleReset();
+    }
+  };
+
+  handleShuffle = () => {
+    let shuffledIt = shuffleIt(games);
+    this.setState({ games: shuffledIt });
+  };
+
+  handleReset = () => {
+    this.setState({
+      currentScore: 0,
+      topScore: this.state.topScore,
+      rightorWrong: "Eek!",
+      clicked: []
+    });
+    this.handleShuffle();
+  };
   // Rendering components
   render() {
     return (
@@ -52,19 +90,20 @@ class App extends Component {
               removeGame={this.removeGame}
               id={game.id}
               key={game.id}
+              handleClick={this.handleClick}
+              handleIncrement={this.handleIncrement}
+              handleReset={this.handleReset}
+              handleShuffle={this.handleShuffle}
               name={game.name}
               image={game.image}
               occupation={game.occupation}
               location={game.location}
             />
-
           ))}
 
         </Wrapper>
         <Footer />
       </div>
-
-
 
     );
   }
