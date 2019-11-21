@@ -42,7 +42,7 @@ class App extends Component {
     this.handleShuffle();
   };
 
-  //handle click event for cards used in GameCard index file, reset
+  //handle click event for cards
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
