@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GameCard from "./components/GameCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Title2 from "./components/Title2";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import games from "./games.json";
@@ -25,23 +26,19 @@ class App extends Component {
     clicked: [],
   };
 
-  removeGame = id => {
-    // Filter this.state.games for games with an id not equal to  the id being removed
-    const games = this.state.games.filter(game => game.id !== id);
-    // Set this.state.games equal to the new games array
-    this.setState({ games });
-  };
+
+
 
   handleIncrement = () => {
     const newTotal = this.state.currentScore + 1;
     this.setState({
       currentScore: newTotal,
-      rightorWrong: ""
+      rightorWrong: "",
     });
     if (newTotal >= this.state.topScore) {
       this.setState({ topScore: newTotal });
     }
-    else if (newTotal === 12) {
+    else if (newTotal === 3) {
       this.setState({ rightorWrong: "Winner!" });
     }
     this.handleShuffle();
@@ -56,6 +53,7 @@ class App extends Component {
     }
   };
 
+
   handleShuffle = () => {
     let shuffledIt = shuffleIt(games);
     this.setState({ games: shuffledIt });
@@ -65,7 +63,7 @@ class App extends Component {
     this.setState({
       currentScore: 0,
       topScore: this.state.topScore,
-      rightorWrong: "Eek!",
+      rightorWrong: "",
       clicked: []
     });
     this.handleShuffle();
@@ -81,8 +79,10 @@ class App extends Component {
             rightorWrong={this.state.rightorWrong}
           />
 
-          <Title>Video Game Memories!
-        </Title>
+          <Title>Video Game Memories
+          </Title>
+          <Title2>Try not to click an image twice, see if you can beat your top score!</Title2>
+
           {this.state.games.map(game => (
             <GameCard
               removeGame={this.removeGame}
@@ -98,7 +98,6 @@ class App extends Component {
               location={game.location}
             />
           ))}
-
         </Wrapper>
         <Footer />
       </div>
