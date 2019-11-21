@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import games from "./games.json";
 import './App.css';
 
+//shuffling function
 function shuffleIt(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -16,7 +17,7 @@ function shuffleIt(array) {
   return array;
 };
 
-//setting state
+//setting data values
 class App extends Component {
   state = {
     games,
@@ -28,7 +29,7 @@ class App extends Component {
 
 
 
-
+  //handles increment counting for scoring
   handleIncrement = () => {
     const newTotal = this.state.currentScore + 1;
     this.setState({
@@ -38,12 +39,10 @@ class App extends Component {
     if (newTotal >= this.state.topScore) {
       this.setState({ topScore: newTotal });
     }
-    else if (newTotal === 3) {
-      this.setState({ rightorWrong: "Winner!" });
-    }
     this.handleShuffle();
   };
 
+  //handle click event for cards used in GameCard index file, reset
   handleClick = id => {
     if (this.state.clicked.indexOf(id) === -1) {
       this.handleIncrement();
@@ -53,12 +52,13 @@ class App extends Component {
     }
   };
 
-
+  //shuffles cards
   handleShuffle = () => {
     let shuffledIt = shuffleIt(games);
     this.setState({ games: shuffledIt });
   };
 
+  //resets currentScore value
   handleReset = () => {
     this.setState({
       currentScore: 0,
