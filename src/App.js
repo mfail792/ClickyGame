@@ -3,7 +3,7 @@ import GameCard from "./components/GameCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Title2 from "./components/Title2";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import games from "./games.json";
 import './App.css';
