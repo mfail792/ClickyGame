@@ -9,7 +9,7 @@
     {
         "id": 2,
         "name": "Lara Croft",
-        "image": "https://upload.wikimedia.org/wikipedia/en/7/7a/Lara_Croft.png",
+        "image": "https://i.pinimg.com/564x/06/70/b7/0670b79e92e99ed9dbf8c667262ccb24.jpg",
         "occupation": "Cave Explorer",
         "location": "Ominous Caves"
     },
@@ -51,7 +51,7 @@
     {
         "id": 8,
         "name": "Blaze",
-        "image": "https://vignette.wikia.nocookie.net/streets-of-rage/images/b/bd/Blaze.png/revision/latest?cb=20141023185413",
+        "image": "https://vignette.wikia.nocookie.net/streetsofrage/images/4/4e/BlazeSOR4.png/revision/latest?cb=20200515094821",
         "occupation": "Karate Master",
         "location": "The Streets"
     },
